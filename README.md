@@ -21,5 +21,7 @@ Follow the instructions from (https://www.gurobi.com/) in order to install gurob
 
 ## Comtributors:
 [@acquayefrank](https://github.com/acquayefrank) --- CGVRP
+
 [@elie-wanko](https://github.com/elie-wanko) --- MCGVRP
+
 [@SamiaNasrin](https://github.com/SamiaNasrin) --- QA of both MCGVRP and CGVRP
