@@ -1,7 +1,10 @@
 # Applied Quantitative Logistics(AQL) Project 
 
-### A solution for a (Mixed) Capacitated Green Vehicle Routing Problem(CGVRP).
-More and more distributors are faced with the daunting task of moving towards green energy in all aspects of operations. This often involves switching distribution vehicles to vehicles that consume alternate fuel. The challenge with alternate fuel however is the limited travel distance before the need for refuelling. Hence these distributors often have vehicles that use traditional fuel and vehicles that use alternate fuel. Our goal is therefore to produce an optimisation algorithm that maximizes the distribution paths of green fuelled vehicles and minimizing the distribution paths of traditional vehicles all this while ensuring that the total demand for services/products is met.
+### Multi-Depot Green Vehicle Routing Problem (MDGVRP) 
+In this project, we investigate a Multi-Depot Green Vehicle Routing Problem (MDGVRP) with capacitated vehicles. We consider a situation in which distributors using conventional powered vehicles are faced with the daunting task of managing a fleet of both traditional fuelled vehicles and capacitated Alternative Fuel Stations (AFSs). Alternative Fuel-powered vehicles (AFVs) start from the existing warehouses, serve customers and, at the end of the day, return to the original warehouses. The limited fuel tank capacity of AFVs forces them to visit the Alternative Fuel Stations (AFS) for refuelling purposes. The goal is to reduce the total production of oil. We propose a solution which uses branch and bound to maximize distribution path when needed and minimize distribution path when needed.
+
+**Keywords:** vehicle routing problem; alternative fuel-powered vehicles; alternative fuel station, renewable energey.
+
 
 ## Requirements
 
