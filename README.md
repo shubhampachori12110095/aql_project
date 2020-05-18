@@ -17,3 +17,9 @@ Follow the instructions from (https://www.gurobi.com/) in order to install gurob
 * Solving TSP found [here](https://www.youtube.com/watch?v=BmsC6AEbkrw)
 * Base Code gotten from [here](https://github.com/industrial-ucn/jupyter-examples/blob/master/optimization/cvrp-cplex.ipynb)
 * Project Inspiration can found [here](https://link.springer.com/article/10.1007%2Fs10479-017-2567-3)
+
+
+## Comtributors:
+[@acquayefrank](https://github.com/acquayefrank) --- CGVRP
+[@elie-wanko](https://github.com/elie-wanko) --- MCGVRP
+[@SamiaNasrin](https://github.com/SamiaNasrin) --- QA of both MCGVRP and CGVRP
