@@ -1,0 +1,77 @@
+We solve a variant of the Muti Depot Capacitated Green Vehicle Routing Problem (MDCGVRP).
+
+Given 7 nodes.  {A, B, C, D, E, F, G} with each node representing a location.
+
+And Nodes {A, G} representing our depots, with nodes {B, C, D, E, F} representing customers 
+
+
+    A       B       C       D       E       F       G
+A   100     9       6       8       6       7       5     
+B   9       100     5       9       7       6       4
+C   6       5       100     7       6       9       11
+D   8       9       7       100     12      11      10
+E   6       7       6       12      100     9       6
+F   7       6       9       11      9       100     2
+G   5       4       11       10     6       2       100
+
+Partitioning Customers into Depots:
+-----------------------------------
+We first find the closest depot for each customer. 
+Then we assign the customer to the closest depot.
+In case the distance between the customer and all depots are the same for all depots pick the depot with least customers,
+In case all depots have the same number of customers randomly assign a customer to a depot
+
+customers_of_depot_G = {}
+customers_of_depot_A = {}
+
+c(B, A) = 9 and c(B, G) = 4 ,  Therefore assign customer B to G 
+
+customers_of_depot_G = {B}
+
+c(C, A) = 6 and c(C, G) = 11,  Therefore assign customer C to A
+
+customers_of_depot_A = {C}
+
+c(D, A) = 8 and c(D, G) = 10, Therefore assign customer D to A 
+
+customers_of_depot_A = {C, D}
+
+c(E, A) = 6 and c(E, G) = 6, Therefore check depot with least customers
+
+length(customers_of_depot_G) = 1
+length(customers_of_depot_A) = 2
+Therefore assign customer E to G
+
+customers_of_depot_G = {B, E}
+
+c(F, A) = 7 and c(F, G) = 2 ,  Therefore assign customer F to G 
+
+customers_of_depot_G = {B, E, F}
+customers_of_depot_A = {C, D}
+
+Assigning Green Vehicles and Conventional Vehicles to Customers:
+----------------------------------------------------------------
+Assume Green Vehicles have a total distance of 20. Then threshold is 40/2 = 20
+
+For each node compute the shortest arc starting from the depot.
+If total arcs travelled less than 20 (threshold) continue with previous step else stop.
+
+For Depot A:
+
+    c(A, C) = 6  
+    c(C, D) = 7
++           = 13
+
+Since 13 is less than 20. Green Vehicle can serve customers C and D at depot A.
+
+
+For Depot G: 
+    c(G, F) = 2
+    c(F, B) = 6
+    c(B, E) = 7
++           = 15
+
+Since 15 is less than 20. Green Vehicle can serve customers B, E and F at depot G.
+
+In this case Conventional vehicles are not used. Perhaps with more data they will be. 
+Also solve the CVRP using (https://www.gurobi.com/)
